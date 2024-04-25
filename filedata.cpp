@@ -13,7 +13,6 @@ QList<ExtendedSeries *> FileData::readLas(const QString &patch)
     }
     QTextStream stream(&f);
     stream.setEncoding(QStringConverter::System);
-    //return readLas(stream);
     return fromFile(stream);
 }
 
@@ -134,14 +133,6 @@ void FileData::processingASCIIInformation(QTextStream &stream, QList<ExtendedSer
         line = stream.readLine().trimmed();
         if (line.contains("~")) break;
         listData.append(line);
-        // while (!stream.atEnd()) {
-        //     line = readLineFromStream(stream);
-        //     if (line.contains("~"))
-        //         return line;
-        //     listData.append(line.split(" ", QString::SkipEmptyParts));
-        // }
-        // for (const CurveDataSP &curve : series)
-        //     curve->addData(listData.takeFirst().toDouble());
     }
     for (int i = 0; i < listData.size(); ++i) {
         QList<float> temp(stringToListFloat(listData.at(i)));
