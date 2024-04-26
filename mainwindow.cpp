@@ -62,12 +62,10 @@ void MainWindow::initStartingConnection()
     connect(ui->saveAsAction, &QAction::triggered,
             this, &MainWindow::saveAs);
 
-    connect(ui->zoomPlusBtn, &QPushButton::clicked, [this](){if(m_chartView) m_chartView->stretchChart(1);});
+    connect(ui->zoomPlusBtn, &QPushButton::clicked, [this](){if(m_chartView) m_chartView->chartShift(10);});
 
-    connect(ui->zoomMinusBtn, &QPushButton::clicked, [this](){if(m_chartView) m_chartView->stretchChart(-1);});
+    connect(ui->zoomMinusBtn, &QPushButton::clicked, [this](){if(m_chartView) m_chartView->chartShift(-10);});
 
     connect(ui->autoScale, &QPushButton::clicked, [this](){if(m_chartView) m_chartView->autoScale();});
 
-    connect(ui->markerDeleteBtn, &QPushButton::clicked,
-            [this](){if(m_chartView) m_chartView->deleteMarkers();});
 }
