@@ -21,14 +21,14 @@
     <item row="0" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QToolButton" name="zoomMinusBtn">
+       <widget class="QToolButton" name="scrollMinusBtn">
         <property name="text">
          <string/>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QToolButton" name="zoomPlusBtn">
+       <widget class="QToolButton" name="scrollPlusBtn">
         <property name="text">
          <string/>
         </property>
@@ -72,9 +72,15 @@
      <string>File</string>
     </property>
     <addaction name="openFileAct"/>
-    <addaction name="saveAsAction"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionVisualLas"/>
    </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="openFileAct">
@@ -85,6 +91,11 @@
   <action name="saveAsAction">
    <property name="text">
     <string>SaveAs</string>
+   </property>
+  </action>
+  <action name="actionVisualLas">
+   <property name="text">
+    <string>VisualLas</string>
    </property>
   </action>
  </widget>

@@ -21,6 +21,7 @@ private slots:
     void openFile(const QString &patchFile);
     void saveAs();
     void informationMessage(QString title, QString information);
+    void about();
 
 private:
     void initStartingConnection();
