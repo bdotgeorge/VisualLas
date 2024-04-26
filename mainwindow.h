@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "ChartView/src/chartview.h"
+#include "ChartView/chartview.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

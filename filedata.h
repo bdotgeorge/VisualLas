@@ -1,7 +1,7 @@
 #ifndef FILEDATA_H
 #define FILEDATA_H
 
-#include "ChartView/src/extendedseries.h"
+#include "ChartView/extendedseries.h"
 #include <QObject>
 
 class FileData : public QObject
